@@ -1,0 +1,12 @@
+<h1>Blogs</h1>
+<h2>Maddy has written {{ blogs.count }} blog{{ blogs.count |pluralize }}.</h2>
+{% comment %} {{ blogs.count |pluralize }} is used to correctly add an s or pluralize the word blog depending on count. {% endcomment %}
+{% for blog in blogs %}
+{% comment %} this passes the id to be used in the blog_detail def in views.py {% endcomment %}
+<a href="{% url 'blog:blog_detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+{% comment %} you can format the date any way you'd like. This is one way checkout Django template docs for more.{% endcomment %}
+<h4>{{ blog.date|date:'M d Y' }}</h4>
+{% comment %} to truncate text the number signifies how many characters to show before truncating with ... {% endcomment %}
+<p>{{ blog.content|truncatechars:150 }}</p>
+
+{% endfor %}
