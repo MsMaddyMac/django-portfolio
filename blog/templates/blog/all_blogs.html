@@ -1,7 +1,8 @@
 {% extends "portfolio/base.html" %}
 {% block content %}
+{% load static %}
 
-<h1>Blogs</h1>
+<img src="{% static 'portfolio/blog.png' %}" width=350>
 <h2>Maddy has written {{ blogs.count }} blog{{ blogs.count |pluralize }}.</h2>
 {% comment %} {{ blogs.count |pluralize }} is used to correctly add an s or pluralize the word blog depending on count. {% endcomment %}
 {% for blog in blogs %}
