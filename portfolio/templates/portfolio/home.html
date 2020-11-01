@@ -1,3 +1,6 @@
+{% extends "portfolio/base.html" %}
+{% block content %}
+
 <h1>MsMaddyMac's Portfolio</h1>
 <a href="{% url 'blog:all_blogs' %}">Check out my Blog!</a>
 <br>
@@ -22,3 +25,5 @@
 {% endif %}
 
 {% endfor %}
+
+{% endblock %}

@@ -1,3 +1,6 @@
+{% extends "portfolio/base.html" %}
+{% block content %}
+
 <h1>Blog Detail</h1>
 
 <h3>{{ blog.title }}</h3>
@@ -6,3 +9,4 @@
 <p>{{blog.content}}</p>
 
 {% comment %} Django allows for html. So if you {% endcomment %}
+{% endblock %}

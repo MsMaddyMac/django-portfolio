@@ -1,3 +1,6 @@
+{% extends "portfolio/base.html" %}
+{% block content %}
+
 <h1>Blogs</h1>
 <h2>Maddy has written {{ blogs.count }} blog{{ blogs.count |pluralize }}.</h2>
 {% comment %} {{ blogs.count |pluralize }} is used to correctly add an s or pluralize the word blog depending on count. {% endcomment %}
@@ -10,3 +13,5 @@
 <p>{{ blog.content|truncatechars:150 }}</p>
 
 {% endfor %}
+
+{% endblock %}
