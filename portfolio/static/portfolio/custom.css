@@ -2,3 +2,36 @@
   font-family: 'Rock Salt', cursive;
   font-size: large;
 }
+
+.navbar {
+  box-shadow: 0px 5px 7px -7px rgba(203, 108, 230, 1);
+  background-color: white;
+}
+
+.navbar-nav .nav-link:hover{
+  color: #5CE1E6 !important;
+}
+
+.container {
+  margin-top: 5rem;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-img {
+  max-width: 286px;
+  max-height: 191px;
+  min-width: 286px;
+  min-height: 191px;
+}
+
+a {
+  text-decoration: none !important;
+  color: black;
+}
+a:hover {
+  color: #ff66c3 !important;
+}
